@@ -1,19 +1,18 @@
 {
     "manifest_version": 3,
-    "name": "Twitter Redirector",
-    "version": "1.0",
-    "description": "Redirects twitter.com or x.com to twitter.com?mx=1",
+    "name": "Block Twitter Redirector",
+    "version": "1.0.0",
+    "description": "twitter.comがx.comにリダイレクトされないようにします。",
     "background": {
         "service_worker": "background.js"
     },
     "permissions": [
         "declarativeNetRequest",
-        "declarativeNetRequestWithHostAccess",
-        "declarativeNetRequestFeedback"
+        "declarativeNetRequestWithHostAccess"
     ],
     "host_permissions": [
-        "*://twitter.com/*",
-        "*://x.com/*"
+        "*://*.twitter.com/*",
+        "*://*.x.com/*"
     ],
     "icons": {
         "48": "icon.png",
